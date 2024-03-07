@@ -23,7 +23,7 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             children: [
               Text(
-                'ini bagian gua',
+                'udah gua push',
                 style: TextStyle(
                   fontSize: 35,
                 ),
