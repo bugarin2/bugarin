@@ -16,7 +16,7 @@ Example :
 - [docs] changes to the documentation
 
 # Folder Structure for Flutter Applications (Folders By Feature)
-
+```
 --lib
 |--feature_1
 |  |--screens
@@ -31,6 +31,7 @@ Example :
 |  |--services
 |  |--view_models
 |....
+```
 
 # Roadmap
 
