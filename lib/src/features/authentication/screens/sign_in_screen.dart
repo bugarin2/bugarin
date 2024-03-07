@@ -23,7 +23,7 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             children: [
               Text(
-                'PR IMAN TOLONG LANJUT BIKIN / KASIH IDE LOGIN FORM PADA SCREEN INI',
+                'hmm',
                 style: TextStyle(
                   fontSize: 35,
                 ),

@@ -1,4 +1,4 @@
-package com.bugarin.bugarin
+package com.mediavisualgroup.bugarin
 
 import io.flutter.embedding.android.FlutterActivity
 

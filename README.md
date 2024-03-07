@@ -7,14 +7,16 @@ an application created to help the body's ability to carry out daily activities 
 https://medium.com/@callmeryan/semantic-commit-messages-bcd60f75de1f
 
 Example : 
-[feature] MainActivity: (#2806) add broadcast receiver
-[style] remove redundant line breaks  
-[refactor] Viewholders: rename memberId to userId
-[fix] PaymentActivity: (#4231) fix Null Pointer Exception when decoding json string
-[chore] update build.gradle
+- [feature] MainActivity: (#2806) add broadcast receiver
+- [style] remove redundant line breaks  
+- [refactor] Viewholders: rename memberId to userId
+- [fix] PaymentActivity: (#4231) fix Null Pointer Exception when decoding json string
+- [chore] update build.gradle
+- [test] adding missing tests, refactoring tests; no production code change
+- [docs] changes to the documentation
 
 # Folder Structure for Flutter Applications (Folders By Feature)
-
+```
 --lib
 |--feature_1
 |  |--screens
@@ -29,6 +31,7 @@ Example :
 |  |--services
 |  |--view_models
 |....
+```
 
 # Roadmap
 
