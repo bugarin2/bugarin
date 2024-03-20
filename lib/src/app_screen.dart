@@ -14,7 +14,6 @@ class AppScreen extends StatefulWidget {
 class _AppScreenState extends State<AppScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
