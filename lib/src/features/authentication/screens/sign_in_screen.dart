@@ -49,7 +49,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     Icons.email,
                     color: Color(0xff5ac18e),
                   ),
-                  hintText: 'email test',
+                  hintText: 'email est',
                   hintStyle: TextStyle(
                     color: Colors.black38,
                   )),
