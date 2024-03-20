@@ -11,41 +11,175 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
+  Widget buildEmail() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Email',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 10),
+        Container(
+            alignment: Alignment.centerLeft,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black26,
+                    blurRadius: 6,
+                    offset: Offset(10, 5),
+                  )
+                ]),
+            height: 50,
+            child: const TextField(
+              keyboardType: TextInputType.emailAddress,
+              style: TextStyle(
+                color: Colors.black87,
+              ),
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.only(top: 14),
+                  prefixIcon: Icon(
+                    Icons.email,
+                    color: Color(0xff5ac18e),
+                  ),
+                  hintText: 'email',
+                  hintStyle: TextStyle(
+                    color: Colors.black38,
+                  )),
+            ))
+      ],
+    );
+  }
+
+  Widget buildPassword() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Password',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 10),
+        Container(
+            alignment: Alignment.centerLeft,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 6,
+                      offset: Offset(10, 5))
+                ]),
+            height: 50,
+            child: const TextField(
+              obscureText: true,
+              style: TextStyle(
+                color: Colors.black87,
+              ),
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.only(top: 14),
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Color(0xff5ac18e),
+                  ),
+                  hintText: 'Password',
+                  hintStyle: TextStyle(
+                    color: Colors.black38,
+                  )),
+            ))
+      ],
+    );
+  }
+
+  Widget buildForgotPassBtn() {
+    return Container(
+      alignment: Alignment.centerRight,
+      padding: const EdgeInsets.all(0),
+      child: TextButton(
+          // ignore: avoid_print
+          onPressed: () => print("button forgot pressed"),
+          child: const Text(
+            'forgot password',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          )),
+    );
+  }
+
+  Widget buildLoginBtn() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+      width: double.infinity,
+      child: ElevatedButton(
+        //elevation: 5,
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => const SignInScreen(),
+            ),
+          );
+        },
+        style: ElevatedButton.styleFrom(
+          padding: const EdgeInsets.all(0), // Set padding here
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
+        child: const Text(
+          'LOGIN',
+          style: TextStyle(
+            color: Color(0xff5ac18e),
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          vertical: AppPadding.p50,
+        padding: const EdgeInsets.symmetric(
+          vertical: AppPadding.p120,
           horizontal: AppPadding.p24,
         ),
         child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'hmm',
+              const Text(
+                'Sign In',
                 style: TextStyle(
-                  fontSize: 35,
+                  color: Colors.white,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
-                height: 40,
+              const SizedBox(
+                height: 75,
               ),
-              Text(
-                'KALO BINGUNG BISA TANYAKAN KE GM SAHTIA',
-                style: TextStyle(
-                  fontSize: 50,
-                ),
+              buildEmail(),
+              const SizedBox(
+                height: 15,
               ),
-              SizedBox(
-                height: 40,
-              ),
-              Text(
-                'TERIMA KASIH BANYAK -SPR AAN',
-                style: TextStyle(
-                  fontSize: 35,
-                ),
-              ),
+              buildPassword(),
+              buildForgotPassBtn(),
+              buildLoginBtn(),
             ],
           ),
         ),
