@@ -1,3 +1,4 @@
+import 'package:bugarin/src/features/gym/screens/gym_exercises_screen.dart';
 import 'package:bugarin/src/features/theme_manager/values_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -127,7 +128,7 @@ class _SignInScreenState extends State<SignInScreen> {
         onPressed: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const SignInScreen(),
+              builder: (context) => const GymExercisesScreen(),
             ),
           );
         },
@@ -154,34 +155,31 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(
-          vertical: AppPadding.p120,
+          vertical: AppPadding.p10,
           horizontal: AppPadding.p24,
         ),
-        child: SingleChildScrollView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Sign In',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              'Sign In',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
               ),
-              const SizedBox(
-                height: 75,
-              ),
-              buildEmail(),
-              const SizedBox(
-                height: 15,
-              ),
-              buildPassword(),
-              buildForgotPassBtn(),
-              buildLoginBtn(),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 75,
+            ),
+            buildEmail(),
+            const SizedBox(
+              height: 15,
+            ),
+            buildPassword(),
+            buildForgotPassBtn(),
+            buildLoginBtn(),
+          ],
         ),
       ),
     );
