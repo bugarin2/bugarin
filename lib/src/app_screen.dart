@@ -1,4 +1,5 @@
 import 'package:bugarin/src/features/authentication/screens/sign_in_screen.dart';
+import 'package:bugarin/src/features/gym/screens/gym_exercises_screen.dart';
 import 'package:bugarin/src/features/theme_manager/theme_data_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -22,8 +23,9 @@ class _AppScreenState extends State<AppScreen> {
     return MaterialApp(
       title: 'Bugarin',
       theme: getApplicationThemeData(),
-      home: const SignInScreen(),
+      home: const GymExercisesScreen(),
       routes: {
+        GymExercisesScreen.routeName: (context) => const GymExercisesScreen(),
         SignInScreen.routeName: (context) => const SignInScreen(),
       },
       debugShowCheckedModeBanner: false,
