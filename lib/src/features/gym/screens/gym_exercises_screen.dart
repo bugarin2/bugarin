@@ -18,11 +18,11 @@ class _GymExercisesScreen extends State<GymExercisesScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     GymExercisesMovementWidget(),
     Text(
-      'Index 1: Business',
+      'Index 1: Plans',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Index 2: Log',
       style: optionStyle, 
     ),
     SignInScreen(),
@@ -38,7 +38,7 @@ class _GymExercisesScreen extends State<GymExercisesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: const Text('Exercises'),
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -51,13 +51,13 @@ class _GymExercisesScreen extends State<GymExercisesScreen> {
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.list_alt_rounded),
+            label: 'Plans',
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.history),
+            label: 'Log',
             backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
