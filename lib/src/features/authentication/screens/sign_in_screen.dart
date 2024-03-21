@@ -16,7 +16,7 @@ class _SignInScreenState extends State<SignInScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text(
-          'Email',
+          'Email Test',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
