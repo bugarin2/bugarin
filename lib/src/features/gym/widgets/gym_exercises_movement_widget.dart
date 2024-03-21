@@ -5,6 +5,6 @@ class GymExercisesMovementWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('test');
+    return Text('Abs');
   }
 }
