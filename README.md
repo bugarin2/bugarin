@@ -40,3 +40,6 @@ https://www.google.com/search?sca_esv=ad2aacbf6bcb86d2&sxsrf=ACQVn0-a_eezPxINUul
 # Goals and Objectives
 
 At first we will make an application for gym people and will continue for other "bugarin" applications
+
+# Reference Database Storage
+https://www.youtube.com/watch?v=9kbt4SBKhm0
