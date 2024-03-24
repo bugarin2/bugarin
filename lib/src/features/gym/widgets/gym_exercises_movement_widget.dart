@@ -11,7 +11,7 @@ class GymExercisesMovementWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             const ListTile(
-              leading: ImageIcon(AssetImage("images/flutter.png")),
+              leading: ImageIcon(AssetImage("assets/images/gym_abs.png")),
               title: Text(
                 'Abs',
                 style: TextStyle(fontSize: 20),
